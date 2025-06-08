@@ -1,7 +1,7 @@
 
 import { Task } from '@/context/TaskContext';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://todo-app-vu4m.onrender.com';
 
 export const taskService = {
   async getAllTasks(): Promise<Task[]> {
