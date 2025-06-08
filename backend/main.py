@@ -7,13 +7,21 @@ from database import init_db
 app = FastAPI(title="Todo API", version="1.0.0")
 
 # Configure CORS
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173", "http://localhost:8080" ,"https://anshikatodo.netlify.app/"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173", "http://localhost:8080" ,"https://anshikatodo.netlify.app/"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Initialize database
 init_db()
